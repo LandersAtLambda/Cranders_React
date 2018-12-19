@@ -219,8 +219,9 @@ p {
   font-family: 'Rock Salt', cursive;
   width: auto;
   position: relative;
+  opacity: 0;
   /* The image used */
-  background-image: url("/img/sac.jpg");
+  background-image: url("./img/sac.jpg");
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
@@ -266,6 +267,7 @@ p {
 .bodyWrap {
   display: flex;
   justify-content: center;
+  color: gray;
 }
 .bodyWrap .portfolio {
   width: 1000px;
