@@ -144,7 +144,6 @@ table {
 html {
 	font-size: 62.5%;
 }
-<<<<<<< HEAD
 html,
 body {
 	font-family: 'Roboto', sans-serif;
@@ -282,10 +281,3 @@ footer nav a {
 	max-width: 320px;
 	margin: 15px;
 }
-=======
-
-.container{
-  width: 1000px;
-  margin: 0 auto;
-}
->>>>>>> 3bcb07c01c789cfaaa790b194c67ff7ed84a84be
