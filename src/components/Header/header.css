@@ -1,0 +1,20 @@
+.header{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'roboto', Courier, monospace;
+    padding-top: 10px;
+    align-items: baseline;
+
+}
+.logo{
+    font-size: 3rem;
+}
+nav{
+    font-size: 1.8rem;
+}
+
+nav a{
+    margin: 0 15px;
+    text-decoration: none;
+}
