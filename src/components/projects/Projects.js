@@ -1,15 +1,13 @@
 import React from 'react';
 import Project from './Project';
-import { Card } from 'reactstrap';
 
 function Projects(props) {
-	console.log(props.data.name);
 	return (
-		<Card>
+		<div className='portfolio'>
 			{props.data.map(item => {
-				return <Project item={item} />;
+				return <Project handlePreview={props.handlePreview} key={item.id} item={item} />;
 			})}
-		</Card>
+		</div>
 	);
 }
 

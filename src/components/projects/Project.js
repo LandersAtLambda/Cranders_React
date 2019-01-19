@@ -1,23 +1,23 @@
 import React from 'react';
-import { CardBody, CardLink, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardLink, CardTitle, Button } from 'reactstrap';
 
 function Project(props) {
 	// console.log(props.item);
 	return (
-		<React.Fragment>
+		<Card>
 			<CardBody>
 				<CardTitle>{props.item.name}</CardTitle>
 			</CardBody>
 			<img
 				width="100%"
-				src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+				src={props.item.img}
 				alt={props.item.name}
 			/>
 			<CardBody>
-				<CardLink href="#">{props.item.github}</CardLink>
-				<CardLink href="#">{props.item.link}</CardLink>
+				<Button color="primary" size='lg' onClick={(e) => { props.handlePreview(e, props.item.github) }}>GitHub</Button>
+				<Button color="primary" size='lg' onClick={(e) => { props.handlePreview(e, props.item.preview) }}>Preview</Button>
 			</CardBody>
-		</React.Fragment>
+		</Card>
 	);
 }
 

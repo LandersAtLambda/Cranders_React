@@ -4,7 +4,7 @@ import Projects from './components/projects/Projects';
 import data from './data.js';
 
 // import Cards from './components/cards/Cards';
-
+import './cssReset.css'
 import './styles.css';
 
 class App extends React.Component {
@@ -21,35 +21,20 @@ class App extends React.Component {
 		});
 	};
 
+	handlePreview = (e, url) => {
+		e.preventDefault();
+		console.log(url)
+		window.open(`${url}`)
+	}
+
 	render(props) {
 		console.log(this.state.data);
 		return (
 			<React.Fragment>
 				<div className="container">
 					<TopBarContainer />
-					{/* <div className="hero">
-					<div className="attribution">
-						Credit:{' '}
-						<a href="https://www.flickr.com/photos/98786299@N00/9889667656/">
-							Flickr/Peter Thoeny
-						</a>
-					</div>
-					<div className="tagline">
-						<h1>Full Stack Web Developer</h1>
-						<br />
-						<h4>In Training</h4>
-					</div>
-					<div className="headshot">
-						<img src={headshot} alt="" />
-					</div>
-				</div> */}
 					<div className="bodyWrap">
-						<div className="portfolio">
-							<h2>Projects</h2>
-							<div className="projects">
-								<Projects data={this.state.data} />
-							</div>
-						</div>
+						<Projects handlePreview={this.handlePreview} data={this.state.data} />
 					</div>
 					<footer>
 						<nav>
