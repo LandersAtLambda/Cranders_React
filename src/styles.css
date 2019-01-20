@@ -51,23 +51,7 @@ nav a{
 	height: 100%;
 	max-width: 1000px;
 }
-	/* @media (min-width: 1200px){
-.container {
-    max-width: 1050px;
-}}
 
-@media (min-width: 992px){
-.container {
-    max-width: 960px;
-}}
-@media (min-width: 768px){
-.container {
-    max-width: 720px;
-}}
-@media (min-width: 576px){
-.container {
-    max-width: 540px;
-}} */
 
 .headerWrap {
 	display: flex;
@@ -76,6 +60,12 @@ nav a{
 	background-color: #fff;
 	height: 60px;
 }
+	@media(min-width:1200px){
+	.headerWrap{
+		max-width: 800px;
+	}
+}
+
 nav a {
 	margin-left: 20px;
 	text-decoration: none;
@@ -100,10 +90,15 @@ nav a {
 }
 .portfolio {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin-top: 20px;
+}
+@media(min-width:1200px){
+	.portfolio{
+		justify-content: space-around;
+	}
 }
 footer {
 	display: flex;
@@ -120,11 +115,12 @@ footer nav a {
 /* ReactStrap Mods */
 .card {
 	max-width: 320px;
-	margin: 10px;
+	margin: 5px;
 }
 .card-body{
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
 }
 .btn{
 	margin-bottom: 10px;

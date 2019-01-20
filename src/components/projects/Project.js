@@ -1,13 +1,11 @@
 import React from 'react';
-import { Card, CardBody, CardLink, CardTitle, Button } from 'reactstrap';
+import { Card, CardBody, CardHeader, Button } from 'reactstrap';
 
 function Project(props) {
 	// console.log(props.item);
 	return (
 		<Card>
-			<CardBody>
-				<CardTitle>{props.item.name}</CardTitle>
-			</CardBody>
+			<CardHeader>{props.item.name}</CardHeader>
 			<img
 				width="100%"
 				src={props.item.img}
