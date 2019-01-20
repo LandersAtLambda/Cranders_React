@@ -36,12 +36,6 @@ class App extends React.Component {
 					<div className="bodyWrap">
 						<Projects handlePreview={this.handlePreview} data={this.state.data} />
 					</div>
-					<footer>
-						<nav>
-							<a href="cranders.com">Home</a>
-							<a href="cranders.com">Contact</a>
-						</nav>
-					</footer>
 				</div>
 			</React.Fragment>
 		);
