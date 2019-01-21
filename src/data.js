@@ -20,27 +20,6 @@ const projects = [
 		github: 'https://github.com/mlanders/Sprint-Challenge-React-Wars',
 		preview: 'https://reactwars.cranders.com/',
 	},
-	{
-		id: 4,
-		name: 'test',
-		img: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-		github: 'www.github.com',
-		preview: 'www.netlify.com',
-	},
-	{
-		id: 5,
-		name: 'test',
-		img: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-		github: 'www.github.com',
-		preview: 'www.netlify.com',
-	},
-	{
-		id: 6,
-		name: 'test',
-		img: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-		github: 'www.github.com',
-		preview: 'www.netlify.com',
-	},
 ];
 
 export default projects;

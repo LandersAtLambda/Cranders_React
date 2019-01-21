@@ -31,8 +31,8 @@ class App extends React.Component {
 		console.log(this.state.data);
 		return (
 			<React.Fragment>
+				<TopBarContainer />
 				<div className="container">
-					<TopBarContainer />
 					<div className="bodyWrap">
 						<Projects handlePreview={this.handlePreview} data={this.state.data} />
 					</div>
