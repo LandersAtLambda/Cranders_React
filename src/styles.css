@@ -4,7 +4,7 @@ html {
 html,
 body {
 	font-family: 'Roboto', sans-serif;
-	font-family: 'Rock Salt', cursive;
+	/* font-family: 'Rock Salt', cursive; */
 	color: #e8e9eb;
 	height: 100%;
 }
