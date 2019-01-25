@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function Logo(props) {
 	return (
-		<a href="index.html" className="logo">
-			Cranders
-		</a>
+		<Link className="logo" to='/' >Cranders</Link>
+		// <a href="index.html" className="logo">
+		// 	Cranders
+		// </a>
 	);
 }
 

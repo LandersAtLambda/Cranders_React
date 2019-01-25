@@ -1,7 +1,9 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import TopBarContainer from './components/topBar/TopBarContainer';
 import Projects from './components/projects/Projects';
 import data from './data.js';
+import Contact from './components/contact/Contact';
 
 // import Cards from './components/cards/Cards';
 import './cssReset.css'
@@ -32,12 +34,14 @@ class App extends React.Component {
 		return (
 			<React.Fragment>
 				<TopBarContainer />
-				<div className="container">
+				<Route path='/contact' render={props => <Contact {...props} />} />
+				<Route exact path='/' render={props => <Projects {...props} handlePreview={this.handlePreview} data={this.state.data} />} />
+				{/* <div className="container">
 					<div className="bodyWrap">
 						<Projects handlePreview={this.handlePreview} data={this.state.data} />
 					</div>
-				</div>
-			</React.Fragment>
+				</div> */}
+			</React.Fragment >
 		);
 	}
 }

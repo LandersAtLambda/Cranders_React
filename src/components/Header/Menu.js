@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Menu() {
     return (
@@ -6,7 +7,7 @@ function Menu() {
             <a href="index.html">Home</a>
             <a href="www.apple.com">About</a>
             <a href="#portfolio">Portfolio</a>
-            <a href="www.apple.com">Contact</a>
+            <Link to='/contact' >Contact</Link>
         </nav>
 
     )

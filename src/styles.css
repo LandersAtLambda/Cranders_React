@@ -128,3 +128,7 @@ footer nav a {
 .btn{
 	margin-bottom: 10px;
 }
+.card-header img{
+	width: 320px;
+	height: 250px;
+}
