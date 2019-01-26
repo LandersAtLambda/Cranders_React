@@ -10,7 +10,8 @@ function Nav(props) {
 			{/* <a href="cranders.com">About</a>
 			<a href="#portfolio">Portfolio</a> */}
 			{/* <a href="cranders.com">Contact</a> */}
-			<Link to='/contact' >Contact</Link>
+
+			{/* <Link to='/contact' >Contact</Link> */}
 
 		</nav>
 	);

@@ -100,7 +100,7 @@ nav a {
 }
 @media(min-width:1200px){
 	.portfolio{
-		justify-content: space-around;
+		/* justify-content: space-around; */
 	}
 }
 footer {
@@ -118,7 +118,7 @@ footer nav a {
 /* ReactStrap Mods */
 .card {
 	max-width: 320px;
-	margin: 5px;
+	margin: 5px 10px;
 }
 .card-body{
 	display: flex;
@@ -131,4 +131,15 @@ footer nav a {
 .card-header img{
 	width: 320px;
 	height: 250px;
+}
+
+/* Conctact Form */
+.contactForm{
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: 15px auto 0;
+}
+.contactInput{
+	margin-bottom: 15px;
 }
