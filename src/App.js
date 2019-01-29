@@ -4,10 +4,7 @@ import TopBarContainer from './components/topBar/TopBarContainer';
 import Projects from './components/projects/Projects';
 import data from './data.js';
 import Contact from './components/contact/Contact';
-
-// import Cards from './components/cards/Cards';
-import './cssReset.css'
-import './styles.css';
+import { Jumbotron } from 'reactstrap';
 
 class App extends React.Component {
 	constructor(props) {
@@ -25,23 +22,39 @@ class App extends React.Component {
 
 	handlePreview = (e, url) => {
 		e.preventDefault();
-		console.log(url)
-		window.open(`${url}`)
-	}
+		console.log(url);
+		window.open(`${url}`);
+	};
 
 	render(props) {
 		console.log(this.state.data);
 		return (
 			<React.Fragment>
 				<TopBarContainer />
-				<Route path='/contact' render={props => <Contact {...props} />} />
-				<Route exact path='/' render={props => <Projects {...props} handlePreview={this.handlePreview} data={this.state.data} />} />
+				<Jumbotron>
+					<h1>Welcome</h1>
+				</Jumbotron>
+				<Route
+					exact
+					path="/"
+					render={props => (
+						<Projects
+							{...props}
+							handlePreview={this.handlePreview}
+							data={this.state.data}
+						/>
+					)}
+				/>
+				<Route
+					path="/contact"
+					render={props => <Contact {...props} />}
+				/>
 				{/* <div className="container">
 					<div className="bodyWrap">
 						<Projects handlePreview={this.handlePreview} data={this.state.data} />
 					</div>
 				</div> */}
-			</React.Fragment >
+			</React.Fragment>
 		);
 	}
 }

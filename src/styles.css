@@ -5,8 +5,9 @@ html,
 body {
 	font-family: 'Roboto', sans-serif;
 	/* font-family: 'Rock Salt', cursive; */
-	color: #e8e9eb;
+	color: #313638;
 	height: 100%;
+	background-color: #313638;
 }
 h1 {
 	font-size: 3rem;
@@ -24,26 +25,24 @@ p {
 	margin-bottom: 10px;
 }
 /* Custom Styling */
-.header{
-    width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'roboto', Courier, monospace;
-    padding-top: 10px;
-    align-items: baseline;
-
+.header {
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	font-family: 'roboto', Courier, monospace;
+	padding-top: 10px;
+	align-items: baseline;
 }
-.logo{
-    font-size: 2.5rem;
-
+.logo {
+	font-size: 2.5rem;
 }
-nav{
-    font-size: 1.8rem;
+nav {
+	font-size: 1.8rem;
 }
 
-nav a{
-    margin: 0 15px;
-    text-decoration: none;
+nav a {
+	margin: 0 15px;
+	text-decoration: none;
 }
 .container {
 	margin: 0 auto;
@@ -53,18 +52,15 @@ nav a{
 	max-width: 1020px;
 }
 
-
 .headerWrap {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
-	background-color: #fff;
-	padding: 15px 15%;
-	background-color: rgb(241, 241, 241);
-
+	padding: 5px 15%;
+	background-color: #e8e9eb;
 }
-	@media(min-width:1200px){
-	.headerWrap{
+@media (min-width: 1200px) {
+	.headerWrap {
 		/* max-width: 800px; */
 	}
 }
@@ -85,6 +81,13 @@ nav a {
 		margin-bottom: 10px;
 	}
 }
+
+.jumbotron {
+	max-width: 1000px;
+	width: 100%;
+	margin: 15px auto;
+}
+
 .bodyWrap {
 	display: flex;
 	flex-direction: column;
@@ -98,8 +101,8 @@ nav a {
 	flex-wrap: wrap;
 	margin-top: 20px;
 }
-@media(min-width:1200px){
-	.portfolio{
+@media (min-width: 1200px) {
+	.portfolio {
 		/* justify-content: space-around; */
 	}
 }
@@ -114,32 +117,36 @@ footer nav a {
 	color: #383838;
 }
 
-
 /* ReactStrap Mods */
 .card {
 	max-width: 320px;
 	margin: 5px 10px;
 }
-.card-body{
+.card-body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 }
-.btn{
+.btn {
 	margin-bottom: 10px;
+	font-size: 1.6rem;
 }
-.card-header img{
+.card-header {
+	font-size: 2rem;
+}
+
+.card-header img {
 	width: 320px;
 	height: 250px;
 }
 
 /* Conctact Form */
-.contactForm{
+.contactForm {
 	display: flex;
 	flex-direction: column;
 	max-width: 400px;
 	margin: 15px auto 0;
 }
-.contactInput{
+.contactInput {
 	margin-bottom: 15px;
 }
