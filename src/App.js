@@ -32,7 +32,10 @@ class App extends React.Component {
 			<React.Fragment>
 				<TopBarContainer />
 				<Jumbotron>
-					<h1>Welcome</h1>
+					<h4>
+						Hi! I'm Michael Landers. I'm a full stack web developer
+						in the Sacramento region.{' '}
+					</h4>
 				</Jumbotron>
 				<Route
 					exact

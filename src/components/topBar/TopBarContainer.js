@@ -6,7 +6,7 @@ function TopBarContainer(props) {
 	return (
 		<div className="headerWrap">
 			<Logo />
-			<Nav />
+			{/* <Nav /> */}
 		</div>
 	);
 }

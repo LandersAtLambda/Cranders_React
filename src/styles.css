@@ -54,9 +54,11 @@ nav a {
 
 .headerWrap {
 	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-	padding: 5px 15%;
+	/* justify-content: space-between; */
+	justify-content: center;
+	align-items: center;
+	/* align-items: baseline; */
+	padding: 10% 15%;
 	background-color: #e8e9eb;
 }
 @media (min-width: 1200px) {
@@ -83,6 +85,9 @@ nav a {
 }
 
 .jumbotron {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	max-width: 1000px;
 	width: 100%;
 	margin: 15px auto;
