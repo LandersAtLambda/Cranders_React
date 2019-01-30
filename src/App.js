@@ -31,12 +31,12 @@ class App extends React.Component {
 		return (
 			<React.Fragment>
 				<TopBarContainer />
-				<Jumbotron>
+				{/* <Jumbotron>
 					<h4>
 						Hi! I'm Michael Landers. I'm a full stack web developer
 						in the Sacramento region.{' '}
 					</h4>
-				</Jumbotron>
+				</Jumbotron> */}
 				<Route
 					exact
 					path="/"

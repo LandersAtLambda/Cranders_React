@@ -1,8 +1,7 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Button } from 'reactstrap';
+import { Card, CardBody, CardHeader, Button, Badge } from 'reactstrap';
 
 function Project(props) {
-	// console.log(props.item);
 	return (
 		<Card>
 			<CardHeader>{props.item.name}</CardHeader>
@@ -14,6 +13,12 @@ function Project(props) {
 			<CardBody>
 				<Button color="primary" size='lg' onClick={(e) => { props.handlePreview(e, props.item.github) }}>GitHub</Button>
 				<Button color="primary" size='lg' onClick={(e) => { props.handlePreview(e, props.item.preview) }}>Preview</Button>
+				<div className="tags">
+					{props.item.tags.map(tag => {
+						return <i className={`tag fab ${tag}`} />
+						// <Badge color='info'>tag</Badge>
+					})}
+				</div>
 			</CardBody>
 		</Card>
 	);
