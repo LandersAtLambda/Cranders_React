@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Projects from './components/projects/Projects';
-import data from './data.js';
+import db from './data.js';
 import Top from './components/Top';
 import Bottom from './components/Bottom';
 
@@ -12,19 +12,12 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
-class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			data: [],
-		};
-	}
+function App() {
+	const [data, setData] = useState();
 
-	componentDidMount = () => {
-		this.setState({
-			data: data,
-		});
-	};
+	useEffect(() => {
+		setData(db);
+	});
 
 	handlePreview = (e, url) => {
 		e.preventDefault();
@@ -32,32 +25,25 @@ class App extends React.Component {
 		window.open(`${url}`);
 	};
 
-	render(props) {
-		console.log(this.state.data);
-		return (
-			<React.Fragment>
-				<GlobalStyle />
-				<Top />
-				<Route
-					exact
-					path="/"
-					render={props => (
-						<Projects
-							{...props}
-							handlePreview={this.handlePreview}
-							data={this.state.data}
-						/>
-					)}
-				/>
-				{/* <div className="container">
+	return (
+		<React.Fragment>
+			<GlobalStyle />
+			<Top />
+			<Route
+				exact
+				path="/"
+				render={props => (
+					<Projects {...props} handlePreview={this.handlePreview} data={data} />
+				)}
+			/>
+			{/* <div className="container">
 					<div className="bodyWrap">
 						<Projects handlePreview={this.handlePreview} data={this.state.data} />
 					</div>
 				</div> */}
-				<Bottom />
-			</React.Fragment>
-		);
-	}
+			<Bottom />
+		</React.Fragment>
+	);
 }
 
 export default App;
