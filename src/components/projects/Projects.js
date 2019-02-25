@@ -84,7 +84,6 @@ function Projects(props) {
 					</Row>
 				);
 			})}
-			{/* <Project handlePreview={props.handlePreview} key={item.id} item={item} /> */}
 		</Mid>
 	);
 }

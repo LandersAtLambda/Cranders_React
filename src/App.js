@@ -13,34 +13,17 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-	const [data, setData] = useState();
+	const [data, setData] = useState([]);
 
 	useEffect(() => {
 		setData(db);
 	});
 
-	handlePreview = (e, url) => {
-		e.preventDefault();
-		console.log(url);
-		window.open(`${url}`);
-	};
-
 	return (
 		<React.Fragment>
 			<GlobalStyle />
 			<Top />
-			<Route
-				exact
-				path="/"
-				render={props => (
-					<Projects {...props} handlePreview={this.handlePreview} data={data} />
-				)}
-			/>
-			{/* <div className="container">
-					<div className="bodyWrap">
-						<Projects handlePreview={this.handlePreview} data={this.state.data} />
-					</div>
-				</div> */}
+			<Route exact path="/" render={props => <Projects {...props} data={data} />} />
 			<Bottom />
 		</React.Fragment>
 	);

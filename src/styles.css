@@ -61,11 +61,11 @@ nav a {
 	padding: 5px 15%;
 	background-color: #e8e9eb;
 }
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
 	.headerWrap {
-		/* max-width: 800px; */
+		max-width: 800px;
 	}
-}
+} */
 
 /* nav a {
 	margin-left: 20px;
@@ -106,11 +106,11 @@ nav a {
 	flex-wrap: wrap;
 	margin-top: 20px;
 }
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
 	.portfolio {
-		/* justify-content: space-around; */
+		justify-content: space-around;
 	}
-}
+} */
 /* footer {
 	display: flex;
 	justify-content: center;
