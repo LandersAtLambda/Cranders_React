@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Contact from './Contact';
 
 const BottomWrapper = styled.div`
 	width: 100%;
@@ -44,6 +45,7 @@ function Bottom() {
 	return (
 		<BottomWrapper>
 			<BottomSection>
+				{/* <Contact /> */}
 				<ContactInfo>
 					<span>
 						<b>Location:</b> Sacramento Region

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Button, Badge } from 'reactstrap';
+import { Card, CardBody, CardHeader, Button } from 'reactstrap';
 
 function Project(props) {
 	return (

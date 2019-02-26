@@ -1,5 +1,4 @@
 import React from 'react';
-import Project from './Project';
 import styled from 'styled-components';
 
 const Mid = styled.div`
@@ -67,8 +66,8 @@ function Projects(props) {
 		<Mid>
 			{props.data.map(item => {
 				return (
-					<Row>
-						<img src={item.img} />
+					<Row key={item.id}>
+						<img src={item.img} alt={item.name} />
 						<RowContent>
 							<div>
 								<h2>{item.name}</h2>
