@@ -21,14 +21,14 @@ const BottomSection = styled.section`
 const ContactInfo = styled.div`
 	display: flex;
 	flex-direction: column;
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 `;
 const Social = styled.section`
 	height: 100px;
 	align-self: center;
 
 	a {
-		font-size: 5rem;
+		font-size: 4rem;
 		text-decoration: none;
 		color: black;
 		margin: 15px 5px;
@@ -37,7 +37,7 @@ const Social = styled.section`
 
 const Divider = styled.div`
 	border-right: 1px solid gray;
-	height: 100px;
+	height: 75px;
 	align-self: center;
 `;
 
@@ -52,7 +52,7 @@ function Bottom() {
 					</span>
 					<span>
 						<b>Email:</b>
-						<a href="mailto:landers.mike@gmail.com" target="_top">
+						<a href='mailto:landers.mike@gmail.com' target='_top'>
 							landers.mike@gmail.com
 						</a>
 					</span>
@@ -62,9 +62,18 @@ function Bottom() {
 				</ContactInfo>
 				<Divider />
 				<Social>
-					<a className="fab fa-linkedin" href="https://linkedin.com/in/mikelanders/" />
-					<a className="fab fa-github-square" href="https://github.com/mlanders" />
-					<a className="fab fa-twitter-square" href="https://twitter.com/MikeLanders" />
+					<a
+						className='fab fa-linkedin'
+						href='https://linkedin.com/in/mikelanders/'
+					/>
+					<a
+						className='fab fa-github-square'
+						href='https://github.com/mlanders'
+					/>
+					<a
+						className='fab fa-twitter-square'
+						href='https://twitter.com/MikeLanders'
+					/>
 				</Social>
 			</BottomSection>
 		</BottomWrapper>

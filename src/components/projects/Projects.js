@@ -13,7 +13,7 @@ const Button = styled.a`
 	text-decoration: none;
 	padding: 5px 10px;
 	border-radius: 4px;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	background-color: #3c81e3;
 	color: #fff;
 	margin: 0 5px;
@@ -56,6 +56,9 @@ const RowContent = styled.div`
 	height: 300px;
 	padding: 0 10px 10px 10px;
 
+	h2 {
+		font-weight: 300;
+	}
 	p {
 		font-size: 1.6rem;
 	}
@@ -73,11 +76,11 @@ function Projects(props) {
 								<h2>{item.name}</h2>
 								<p>Built in React</p>
 							</div>
-							<div className="rowBtns">
-								<Button href="https://github.com/mlanders/React-Todo">
+							<div className='rowBtns'>
+								<Button href='https://github.com/mlanders/React-Todo'>
 									GitHub
 								</Button>
-								<Button href="https://todo.mikelanders.me/">View</Button>
+								<Button href='https://todo.mikelanders.me/'>View</Button>
 							</div>
 						</RowContent>
 					</Row>

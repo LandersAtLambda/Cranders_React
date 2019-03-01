@@ -6,26 +6,27 @@ const TopSection = styled.section`
 	width: 100%;
 	height: 100vh;
 	background-color: #141414;
-	color: #fff;
+	color: #3c81e3;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	font-size: 4rem;
-	padding: 20px;
+	font-size: 6rem;
 	font-weight: 300;
+	padding: 20px;
 
-	p:nth-child(odd) {
-		color: #3c81e3;
+	p:nth-child(even) {
+		color: #fff;
 		font-weight: 300;
-		font-size: 6rem;
+		font-size: 4rem;
+		margin-top: -50px;
 	}
 `;
 function Top() {
 	return (
 		<TopSection>
-			<p className="name">Mike Landers</p>
-			<p className="subTitle">Full Stack Developer</p>
+			<p className='name'>Mike Landers</p>
+			<p className='subTitle'>Full Stack Developer</p>
 		</TopSection>
 	);
 }
