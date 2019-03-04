@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 const Mid = styled.div`
 	display: flex;
-	flex-direction: column;
-	max-width: 1000px;
+	justify-content: center;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
 	width: 100%;
 	margin: 0 auto;
 	padding: 5px;
@@ -28,21 +29,24 @@ const Button = styled.a`
 
 const Row = styled.article`
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-	max-height: 300px;
-	height: 100%;
-	width: 100%;
-	margin: 20px auto 50px;
-	&:nth-child(even) {
+	max-width: 300xp;
+	margin: 20px 10px 50px;
+	padding: 5px;
+	border-radius: 4px;
+	box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 20px -1px;
+
+	/* &:nth-child(even) {
 		flex-direction: row-reverse;
-	}
+	} */
 
 	img {
 		height: 300px;
 		width: auto;
-		border-radius: 4px;
-		box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 20px -1px;
+		// border-radius: 4px;
+		// box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 20px -1px;
 	}
 `;
 
@@ -50,10 +54,11 @@ const RowContent = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	max-width: 800px;
-	width: 100%;
-	height: 300px;
+	font-size: 1.2rem;
+	/* justify-content: space-between; */
+	/* max-width: 800px;
+	width: 100%; */
+	/* height: 300px; */
 	padding: 0 10px 10px 10px;
 
 	h2 {
@@ -63,24 +68,34 @@ const RowContent = styled.div`
 		font-size: 1.6rem;
 	}
 `;
-
+const Tags = styled.div`
+	font-size: 1.6rem;
+	i {
+		padding: 5px;
+	}
+`;
 function Projects(props) {
 	return (
 		<Mid>
 			{props.data.map(item => {
 				return (
 					<Row key={item.id}>
+						<h2>{item.name}</h2>
+
 						<img src={item.img} alt={item.name} />
 						<RowContent>
-							<div>
-								<h2>{item.name}</h2>
-								<p>Built in React</p>
-							</div>
+							{/* <h2>{item.name}</h2> */}
+							<p>Built in React</p>
 							<div className='rowBtns'>
 								<Button href='https://github.com/mlanders/React-Todo'>
 									GitHub
 								</Button>
 								<Button href='https://todo.mikelanders.me/'>View</Button>
+								<Tags>
+									{item.tags.map(tag => (
+										<i className={` fab ${tag}`} />
+									))}
+								</Tags>
 							</div>
 						</RowContent>
 					</Row>
