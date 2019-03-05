@@ -32,7 +32,8 @@ const Row = styled.article`
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-	max-width: 300xp;
+	max-width: 500px;
+	width: 100%;
 	margin: 20px 10px 50px;
 	padding: 5px;
 	border-radius: 4px;
@@ -43,8 +44,8 @@ const Row = styled.article`
 	} */
 
 	img {
-		height: 300px;
-		width: auto;
+		height: auto;
+		width: 100%;
 		// border-radius: 4px;
 		// box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 20px -1px;
 	}
@@ -65,7 +66,7 @@ const RowContent = styled.div`
 		font-weight: 300;
 	}
 	p {
-		font-size: 1.6rem;
+		font-size: 1.3rem;
 	}
 `;
 const Tags = styled.div`
@@ -85,12 +86,10 @@ function Projects(props) {
 						<img src={item.img} alt={item.name} />
 						<RowContent>
 							{/* <h2>{item.name}</h2> */}
-							<p>Built in React</p>
+							<p>{item.description}</p>
 							<div className='rowBtns'>
-								<Button href='https://github.com/mlanders/React-Todo'>
-									GitHub
-								</Button>
-								<Button href='https://todo.mikelanders.me/'>View</Button>
+								<Button href={item.github}>GitHub</Button>
+								<Button href={item.preview}>View</Button>
 								<Tags>
 									{item.tags.map(tag => (
 										<i className={` fab ${tag}`} />
